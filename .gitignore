@@ -1,0 +1,24 @@
+**/bin/
+**/obj/
+.build/
+artifacts/
+dist/
+setup/
+# 发布产物不入库；验证记录随源码保留
+release/*
+!release/验证说明.md
+**/Data/
+# 网络内核由 tools/prepare-engine.ps1 按 engine.lock.json 下载
+tools/sing-box.exe
+tools/wintun.dll
+.zcode/
+.vs/
+*.user
+*.suo
+*.pdb
+*.log
+*.tmp
+portable.marker
+
+# 本机评估记录，仅本地保留
+项目评估与优化建议.md

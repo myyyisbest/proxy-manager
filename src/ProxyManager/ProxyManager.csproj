@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ProxyManager</RootNamespace>
+    <AssemblyName>ProxyManager</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <Version>1.4.4</Version>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <!-- RID 专属发布由 release.ps1 传 -p:NuGetLockFilePath=packages.win-x64.lock.json 拆分锁文件；
+         此属性写在项目内不生效，勿重复添加 -->
+    <Product>应用代理管理器</Product>
+    <Description>按应用分流的代理管理工具，不依赖系统代理设置</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="WPF-UI" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- sing-box 内核必须作为独立文件存在（单文件运行时按路径启动它），不打包进 exe -->
+    <None Include="..\..\tools\sing-box.exe" Link="sing-box.exe" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\app.ico" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+{
+  "version": "1.14.3",
+  "releaseUrl": "https://github.com/SagerNet/sing-box/releases/tag/v1.14.3",
+  "archiveUrl": "https://github.com/SagerNet/sing-box/releases/download/v1.14.3/sing-box-1.14.3-windows-amd64.zip",
+  "archiveSha256": "d8b86ef58936dba9230ec6a57ffa4243933f3c14ef4809828b6c553440ed1518",
+  "exeSha256": "5c19bb3f8c12d4e85b3d47fe63123a7624b314b58dd7a8e32f51004f1c4d2faf",
+  "sourceUrl": "https://api.github.com/repos/SagerNet/sing-box/zipball/v1.14.3",
+  "sourceSha256": "de45b583ed8410103d64545158a0a3927828fa3556e4066d62c917c85a463bdb"
+}
